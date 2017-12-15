@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomEditText">
+        <attr name="key" format="string" />
+        <attr name="character_limit" format="enum">
+            <enum name="english_and_numbers_only" value="0" />
+            <enum name="numbers_only" value="1" />
+            <enum name="hangul_only" value="2" />
+            <enum name="password" value="3" />
+            <enum name="english_only" value="4" />
+            <enum name="english_and_numbers_hangul_only" value="5" />
+        </attr>
+
+    </declare-styleable>
+    <declare-styleable name="CustomTextView">
+        <attr name="default_text" format="string" />
+    </declare-styleable>
+
+</resources>

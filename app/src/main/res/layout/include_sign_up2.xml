@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    style="@style/small_list_text_style"
+                    android:layout_marginBottom="8dp"
+                    android:text="ID"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.example.kyoungae.myapplication.view.CustomEditText
+                    android:id="@+id/id_text"
+                    style="@style/small_list_text_style"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:hint="아이디"
+                    app:character_limit="english_and_numbers_only" />
+
+                <TextView
+                    style="@style/tiny_text_style"
+                    android:layout_marginBottom="16dp"
+                    android:text="5 ~ 20자의 영문 소문자와 숫자만 입력하세요."
+                    android:textColor="@color/white" />
+
+                <TextView
+                    style="@style/small_list_text_style"
+                    android:layout_marginBottom="8dp"
+                    android:text="Password"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.example.kyoungae.myapplication.view.CustomEditText
+                    android:id="@+id/password1_text"
+                    style="@style/small_list_text_style"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:hint="비밀번호"
+                    app:character_limit="password" />
+
+                <com.example.kyoungae.myapplication.view.CustomEditText
+                    android:id="@+id/password2_text"
+                    style="@style/small_list_text_style"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:hint="비밀번호 확인"
+                    app:character_limit="password" />
+
+                <TextView
+                    style="@style/tiny_text_style"
+                    android:layout_marginBottom="16dp"
+                    android:text="6 ~ 20자 사이로 입력하세요."
+                    android:textColor="@color/white" />
+
+                <TextView
+                    style="@style/small_list_text_style"
+                    android:layout_marginBottom="8dp"
+                    android:text="닉네임"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.example.kyoungae.myapplication.view.CustomEditText
+                    android:id="@+id/nic_text"
+                    style="@style/small_list_text_style"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:hint="닉네임"
+                    />
+
+                <TextView
+                    style="@style/tiny_text_style"
+                    android:layout_marginBottom="16dp"
+                    android:text="3자 이상 입력하세요."
+                    android:textColor="@color/white" />
+
+                <TextView
+                    style="@style/small_list_text_style"
+                    android:layout_marginBottom="8dp"
+                    android:text="이름"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.example.kyoungae.myapplication.view.CustomEditText
+                    android:id="@+id/name_text"
+                    style="@style/small_list_text_style"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:hint="이름" />
+
+                <com.example.kyoungae.myapplication.view.CustomEditText
+                    android:id="@+id/english_name_text"
+                    style="@style/small_list_text_style"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/white"
+                    android:hint="영문이름"
+                    app:character_limit="english_only" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/small_list_text_style"
+                    android:layout_marginBottom="8dp"
+                    android:text="주소"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/post_text"
+                        style="@style/small_list_text_style"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/default_padding"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:hint="우편번호"
+                        app:character_limit="numbers_only" />
+
+                    <Button
+                        android:id="@+id/post_search_button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:background="#404040"
+                        android:text="우편번호 검색"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/address_text"
+                    style="@style/small_list_text_style"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:hint="주소" />
+
+                <com.example.kyoungae.myapplication.view.CustomEditText
+                    android:id="@+id/detail_address_text"
+                    style="@style/small_list_text_style"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:hint="상세 주소" />
+
+                <TextView
+                    style="@style/tiny_text_style"
+                    android:layout_marginBottom="16dp"
+                    android:text="* 도로명 주소를 써주세요.\n지번 주소 기재 시 통관 / 세관에서 오류로 분류시켜 통관 지연이 될 수 있습니다."
+                    android:textColor="@color/white" />
+
+                <TextView
+                    style="@style/small_list_text_style"
+                    android:layout_marginBottom="8dp"
+                    android:text="E-mail"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.example.kyoungae.myapplication.view.CustomEditText
+                    android:id="@+id/email_text"
+                    style="@style/small_list_text_style"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/white"
+                    android:hint="이메일 주소"
+                    android:inputType="textEmailAddress" />
+
+                <TextView
+                    style="@style/small_list_text_style"
+                    android:layout_marginBottom="8dp"
+                    android:text="전화번호"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.example.kyoungae.myapplication.view.CustomEditText
+                    android:id="@+id/home_phone_text"
+                    style="@style/small_list_text_style"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:hint="전화번호(선택)"
+                    app:character_limit="numbers_only" />
+
+                <com.example.kyoungae.myapplication.view.CustomEditText
+                    android:id="@+id/hand_phone_text"
+                    style="@style/small_list_text_style"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:hint="핸드폰번호"
+                    app:character_limit="numbers_only" />
+
+                <TextView
+                    style="@style/tiny_text_style"
+                    android:layout_marginBottom="16dp"
+                    android:text=" - 없이 입력해주세요."
+                    android:textColor="@color/white" />
+
+                <TextView
+                    style="@style/small_list_text_style"
+                    android:layout_marginBottom="8dp"
+                    android:text="생년월일"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.example.kyoungae.myapplication.view.CustomEditText
+                    android:id="@+id/birth_text"
+                    style="@style/small_list_text_style"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:hint="생년월일 (YYYYMMDD)"
+                    app:character_limit="numbers_only" />
+
+                <TextView
+                    style="@style/tiny_text_style"
+                    android:layout_marginBottom="16dp"
+                    android:text="생년월일을 포함하여 8자리로 입력해주세요. 예)19800306"
+                    android:textColor="@color/white" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            style="@style/small_list_text_style"
+                            android:layout_marginBottom="8dp"
+                            android:text="이메일 수신"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <RadioGroup
+                            android:id="@+id/email_check"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:checked="true"
+                                android:id="@+id/email_check_yes"
+                                android:textSize="@dimen/medium_text_size"
+                                android:textColor="@color/white"
+                                android:scaleY="0.8"
+                                android:scaleX="0.8"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="허용" />
+
+                            <RadioButton
+                                android:id="@+id/email_check_no"
+                                android:textSize="@dimen/medium_text_size"
+                                android:textColor="@color/white"
+                                android:scaleY="0.8"
+                                android:scaleX="0.8"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="거부" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            style="@style/small_list_text_style"
+                            android:layout_marginBottom="8dp"
+                            android:text="SMS 수신"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <RadioGroup
+                            android:id="@+id/sms_check"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:checked="true"
+                                android:id="@+id/sms_check_yes"
+                                android:textSize="@dimen/medium_text_size"
+                                android:textColor="@color/white"
+                                android:scaleY="0.8"
+                                android:scaleX="0.8"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="허용" />
+
+                            <RadioButton
+                                android:id="@+id/sms_check_no"
+                                android:textSize="@dimen/medium_text_size"
+                                android:textColor="@color/white"
+                                android:scaleY="0.8"
+                                android:scaleX="0.8"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="거부" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                <TextView
+                    style="@style/small_list_text_style"
+                    android:layout_marginBottom="8dp"
+                    android:text="가입경로 (선택)"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/subscription_path_spinner"
+                    style="@style/small_list_text_style"
+                    android:layout_height="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/white"
+                    android:inputType="textVisiblePassword" />
+
+                <TextView
+                    style="@style/small_list_text_style"
+                    android:layout_marginBottom="8dp"
+                    android:text="추천인"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.example.kyoungae.myapplication.view.CustomEditText
+                    android:id="@+id/recommender_text"
+                    style="@style/small_list_text_style"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/white"
+                    android:hint="추천인 아이디 (선택)"
+                    app:character_limit="english_and_numbers_only" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

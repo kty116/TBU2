@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/rLightLightGray"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1.5"
+                            android:background="@color/rLightGray"></ImageView>
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"></android.support.v4.widget.Space>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/default_padding"
+                        android:paddingTop="15dp">
+
+                        <ImageView
+                            android:id="@+id/user_image"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/splash_logo" />
+
+                        <TextView
+                            android:padding="5dp"
+                            android:id="@+id/user_name_text"
+                            style="@style/medium_list_text_style"
+                            android:gravity="center"
+                            android:textColor="#505050"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/user_grade_text"
+                                style="@style/small_list_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:textColor="#505050"
+                                android:textStyle="bold"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="1dp"
+                                android:layout_height="14dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/item_stroke_black_right_button_bg" />
+
+                            <TextView
+                                android:id="@+id/user_mailbox_text"
+                                style="@style/small_list_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:textColor="@color/colorPrimary"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/address_management_button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/item_stroke_right_bottom_button_bg"
+                        android:text="주소록 관리"
+                        android:textColor="#808080"
+                        android:textSize="@dimen/small_text_size"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/shipping_rates_button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/item_stroke_right_bottom_button_bg"
+                        android:text="배송 요금표"
+                        android:textColor="#808080"
+                        android:textSize="@dimen/small_text_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_margin="@dimen/default_padding"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="105dp"
+                        android:layout_height="match_parent"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:id="@+id/pay_count_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/yellow"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="결제 건수"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/pay_count_text"
+                                style="@style/small_list_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/default_padding"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="105dp"
+                        android:layout_height="match_parent"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:id="@+id/deposit_button1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/green"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="예치금(원)"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/deposit_text"
+                                style="@style/small_list_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/default_padding"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="105dp"
+                        android:layout_height="match_parent"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:id="@+id/message_button1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/red"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="새 메세지"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/message_text"
+                                style="@style/small_list_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/default_padding"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="315dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:id="@+id/pay_history_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/default_padding"
+                                android:layout_marginRight="@dimen/default_padding"
+                                android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                                android:paddingBottom="@dimen/default_padding"
+                                android:paddingTop="@dimen/default_padding"
+                                android:text="결제내역"
+                                android:textColor="#404040"
+                                android:textSize="@dimen/small_text_size" />
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:id="@+id/order_history_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/default_padding"
+                                android:layout_marginRight="@dimen/default_padding"
+                                android:paddingBottom="@dimen/default_padding"
+                                android:paddingTop="@dimen/default_padding"
+                                android:text="주문내역"
+                                android:textColor="#404040"
+                                android:textSize="@dimen/small_text_size" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:id="@+id/deposit_button2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/default_padding"
+                                android:layout_marginRight="@dimen/default_padding"
+                                android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                                android:paddingBottom="@dimen/default_padding"
+                                android:paddingTop="@dimen/default_padding"
+                                android:text="예치금"
+                                android:textColor="#404040"
+                                android:textSize="@dimen/small_text_size" />
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:id="@+id/point_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/default_padding"
+                                android:layout_marginRight="@dimen/default_padding"
+                                android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                                android:paddingBottom="@dimen/default_padding"
+                                android:paddingTop="@dimen/default_padding"
+                                android:text="포인트"
+                                android:textColor="#404040"
+                                android:textSize="@dimen/small_text_size" />
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:id="@+id/coupon_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/default_padding"
+                                android:layout_marginRight="@dimen/default_padding"
+                                android:paddingBottom="@dimen/default_padding"
+                                android:paddingTop="@dimen/default_padding"
+                                android:text="쿠폰함"
+                                android:textColor="#404040"
+                                android:textSize="@dimen/small_text_size" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:id="@+id/inquiry_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/default_padding"
+                                android:layout_marginRight="@dimen/default_padding"
+                                android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                                android:paddingBottom="@dimen/default_padding"
+                                android:paddingTop="@dimen/default_padding"
+                                android:text="1:1문의"
+                                android:textColor="#404040"
+                                android:textSize="@dimen/small_text_size" />
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:id="@+id/message_button2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/default_padding"
+                                android:layout_marginRight="@dimen/default_padding"
+                                android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                                android:paddingBottom="@dimen/default_padding"
+                                android:paddingTop="@dimen/default_padding"
+                                android:text="쪽지함"
+                                android:textColor="#404040"
+                                android:textSize="@dimen/small_text_size" />
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:id="@+id/notice_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/default_padding"
+                                android:layout_marginRight="@dimen/default_padding"
+                                android:paddingBottom="@dimen/default_padding"
+                                android:paddingTop="@dimen/default_padding"
+                                android:text="공지사항"
+                                android:textColor="#404040"
+                                android:textSize="@dimen/small_text_size" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:id="@+id/change_info_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/default_padding"
+                                android:layout_marginRight="@dimen/default_padding"
+                                android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                                android:paddingBottom="@dimen/default_padding"
+                                android:paddingTop="@dimen/default_padding"
+                                android:text="회원정보변경"
+                                android:textColor="#404040"
+                                android:textSize="@dimen/small_text_size" />
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:id="@+id/logout_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/default_padding"
+                                android:layout_marginRight="@dimen/default_padding"
+                                android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                                android:paddingBottom="@dimen/default_padding"
+                                android:paddingTop="@dimen/default_padding"
+                                android:text="로그아웃"
+                                android:textColor="#404040"
+                                android:textSize="@dimen/small_text_size" />
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:id="@+id/setting_button"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/default_padding"
+                                android:layout_marginRight="@dimen/default_padding"
+                                android:paddingBottom="@dimen/default_padding"
+                                android:paddingTop="@dimen/default_padding"
+                                android:text="앱설정"
+                                android:textColor="#404040"
+                                android:textSize="@dimen/small_text_size" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="@dimen/default_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@color/rLightGray"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:id="@+id/terms_button"
+                        style="@style/small_list_text_style"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="이용약관"
+                        android:textColor="#404040" />
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/item_stroke_black_right_button_bg"
+                        android:textColor="#404040" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:id="@+id/info_collection_button"
+                        style="@style/small_list_text_style"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="개인정보취급방침"
+                        android:textColor="#404040" />
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/item_stroke_black_right_button_bg"
+                        android:textColor="#404040" />
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:id="@+id/update_info_button"
+                        style="@style/small_list_text_style"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="업데이트정보"
+                        android:textColor="#404040" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

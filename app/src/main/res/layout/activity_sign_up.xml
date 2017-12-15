@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.7"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/default_padding">
+
+                <TextView
+                    style="@style/medium_list_text_style"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:shadowColor="@color/gray"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="1.5"
+                    android:text="THE BAY"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/medium_list_text_style"
+                    android:gravity="center"
+                    android:shadowColor="@color/gray"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="1.5"
+                    android:text="회원가입"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.4"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/default_padding"
+                    android:paddingRight="@dimen/default_padding">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/terms_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:text="약관 확인"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_text_size"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/terms_bar"
+                            android:layout_width="80dp"
+                            android:layout_height="3dp"
+                            android:layout_gravity="center"
+                            android:background="#35e1ec" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/info_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:text="정보 입력"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_text_size"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:visibility="invisible"
+                            android:id="@+id/info_bar"
+                            android:layout_width="80dp"
+                            android:layout_height="3dp"
+                            android:layout_gravity="center"
+                            android:background="#35e1ec" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/confirm_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:text="가입 확인"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/small_text_size"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:visibility="invisible"
+                            android:id="@+id/confirm_bar"
+                            android:layout_width="80dp"
+                            android:layout_height="3dp"
+                            android:layout_gravity="center"
+                            android:background="#35e1ec" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="@dimen/default_padding"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="@dimen/default_padding">
+
+                    <include
+                        android:visibility="invisible"
+                        android:id="@+id/sign_up3"
+                        layout="@layout/include_sign_up3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <include
+                        android:visibility="invisible"
+                        android:id="@+id/sign_up2"
+                        layout="@layout/include_sign_up2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <include
+                        android:id="@+id/sign_up1"
+                        layout="@layout/include_sign_up1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                         />
+
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:orientation="vertical">
+
+            <Button
+                android:text="다음페이지"
+                android:id="@+id/bottom_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#404040"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+        <!--android:layout_weight="3"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical"-->
+        <!--android:paddingLeft="50dp"-->
+        <!--android:paddingRight="50dp">-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<TextView-->
+        <!--android:layout_marginBottom="5dp"-->
+        <!--android:shadowRadius="1.5"-->
+        <!--android:shadowDx="3"-->
+        <!--android:shadowDy="3"-->
+        <!--style="@style/small_list_text_style"-->
+        <!--android:gravity="center"-->
+        <!--android:text="THE BAY"-->
+        <!--android:textColor="@color/white" />-->
+
+        <!--<TextView-->
+        <!--android:shadowRadius="1.5"-->
+        <!--android:shadowDx="3"-->
+        <!--android:shadowDy="3"-->
+        <!--style="@style/small_list_text_style"-->
+        <!--android:gravity="center"-->
+        <!--android:text="로그인"-->
+        <!--android:textColor="@color/white" />-->
+
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:padding="20dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<TextView-->
+        <!--android:shadowRadius="1.5"-->
+        <!--android:shadowDx="3"-->
+        <!--android:shadowDy="3"-->
+        <!--style="@style/tiny_text_style"-->
+        <!--android:text="ID"-->
+        <!--android:textColor="@color/white" />-->
+
+        <!--<EditText-->
+        <!--android:id="@+id/id_text"-->
+        <!--style="@style/tiny_text_style"-->
+        <!--android:layout_height="26dp"-->
+        <!--android:hint="ID"-->
+        <!--android:inputType="textVisiblePassword"-->
+        <!--android:textColor="@color/white" />-->
+
+        <!--<TextView-->
+        <!--android:shadowRadius="1.5"-->
+        <!--android:shadowDx="3"-->
+        <!--android:shadowDy="3"-->
+        <!--style="@style/tiny_text_style"-->
+        <!--android:text="Password"-->
+        <!--android:textColor="@color/white" />-->
+
+        <!--<EditText-->
+        <!--android:id="@+id/password_text"-->
+        <!--style="@style/tiny_text_style"-->
+        <!--android:layout_height="26dp"-->
+        <!--android:hint="Password"-->
+        <!--android:inputType="textVisiblePassword"-->
+        <!--android:textColor="@color/white" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:gravity="center"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_gravity="left|center"-->
+        <!--android:id="@+id/info_search_button"-->
+        <!--android:layout_width="110dp"-->
+        <!--android:layout_height="110dp"-->
+        <!--app:cardElevation="5dp"-->
+        <!--app:cardUseCompatPadding="true"-->
+        <!--&gt;-->
+
+        <!--<LinearLayout-->
+        <!--android:background="#ff9300"-->
+        <!--android:padding="5dp"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<TextView-->
+        <!--android:textColor="@color/white"-->
+        <!--android:gravity="center"-->
+        <!--style="@style/tiny_text_style"-->
+        <!--android:text="ID 찾기\n패스워드 찾기"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:src="" />-->
+        <!--</LinearLayout>-->
+        <!--</android.support.v7.widget.CardView>-->
+
+        <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_gravity="right|center"-->
+        <!--android:id="@+id/sign_up_button"-->
+        <!--android:layout_width="110dp"-->
+        <!--android:layout_height="110dp"-->
+        <!--app:cardElevation="5dp"-->
+        <!--app:cardUseCompatPadding="true"-->
+        <!--&gt;-->
+
+        <!--<LinearLayout-->
+        <!--android:background="#8dc100"-->
+        <!--android:padding="5dp"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/textView"-->
+        <!--style="@style/tiny_text_style"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center"-->
+        <!--android:text="더베이\n회원 가입"-->
+        <!--android:textColor="@color/white" />-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:src="" />-->
+        <!--</LinearLayout>-->
+        <!--</android.support.v7.widget.CardView>-->
+        <!--</LinearLayout>-->
+
+
+        <!--&lt;!&ndash;<android.support.design.widget.TextInputLayout&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/edit_id_layout"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="0dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:hint="ID">&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<com.thebay.tbworkeruse.view.CustomEditText&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="@dimen/medium_text_size"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/edit_id"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:inputType="textVisiblePassword"&ndash;&gt;-->
+        <!--&lt;!&ndash;app:character_limit="english_and_numbers_only" />&ndash;&gt;-->
+        <!--&lt;!&ndash;</android.support.design.widget.TextInputLayout>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<android.support.design.widget.TextInputLayout&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/edit_pass_layout"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="0dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:hint="Password">&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<com.thebay.tbworkeruse.view.CustomEditText&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="@dimen/medium_text_size"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/edit_pass"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:inputType="textPassword" />&ndash;&gt;-->
+        <!--&lt;!&ndash;</android.support.design.widget.TextInputLayout>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/confirm_button"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="0dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@color/colorAccent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="Login"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="#434343"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="@dimen/medium_text_size" />&ndash;&gt;-->
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+        <!--android:gravity="center"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<Button-->
+        <!--android:id="@+id/login_button"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="#404040"-->
+        <!--android:text="로그인"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="@dimen/small_text_size"-->
+        <!--android:textStyle="bold" />-->
+        <!--</LinearLayout>-->
+    </LinearLayout>
+</layout>

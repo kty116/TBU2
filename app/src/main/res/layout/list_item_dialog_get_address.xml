@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_marginBottom="@dimen/default_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/default_padding"
+                android:paddingRight="@dimen/default_padding">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!--<LinearLayout-->
+                            <!--android:gravity="center"-->
+                            <!--android:orientation="horizontal"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:layout_height="wrap_content">-->
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="수취인 한글 - "
+                                android:textColor="#404040"
+                                android:textSize="@dimen/small_text_size"
+                                />
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:id="@+id/ko_name_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <!--<LinearLayout-->
+                            <!--android:gravity="center"-->
+                            <!--android:orientation="horizontal"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:layout_height="wrap_content">-->
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="수취인 영문 - "
+                                android:textColor="#404040"
+                                android:textSize="@dimen/small_text_size"
+                                />
+
+                            <TextView
+                                android:id="@+id/en_name_text"
+                                style="@style/small_list_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                 />
+                        <!--</LinearLayout>-->
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                       >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="통관번호 - "
+                            android:textColor="#404040"
+                            android:textSize="@dimen/small_text_size" />
+
+                        <TextView
+                            android:id="@+id/customs_clearance_text"
+                            style="@style/small_list_text_style"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                           />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                       >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="연  락  처 - "
+                            android:textColor="#404040"
+                            android:textSize="@dimen/small_text_size" />
+
+                        <TextView
+                            android:id="@+id/phone_text"
+                            style="@style/small_list_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                             />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="한글 주소 - "
+                           android:textColor="#404040"
+                            android:textSize="@dimen/small_text_size" />
+
+                        <TextView
+                            android:id="@+id/ko_address_text"
+                            style="@style/small_list_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="영문 주소 - "
+                            android:textColor="#404040"
+                            android:textSize="@dimen/small_text_size" />
+
+                        <TextView
+                            android:id="@+id/en_address_text"
+                            style="@style/small_list_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                             />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <Button
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@color/yellow"
+                    android:text="선택"
+                    android:layout_gravity="center"
+                    android:id="@+id/select_button"
+                    style="@style/small_list_text_style"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    />
+
+            </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+</layout>

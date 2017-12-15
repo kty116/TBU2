@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.7"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/default_padding"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                android:gravity="center|bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/medium_list_text_style"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:shadowColor="@color/gray"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="1.5"
+                    android:text="THE BAY"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/medium_list_text_style"
+                    android:gravity="center"
+                    android:shadowColor="@color/gray"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="1.5"
+                    android:text="로그인"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    style="@style/small_list_text_style"
+                    android:shadowColor="@color/gray"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:shadowRadius="1.5"
+                    android:layout_marginBottom="5dp"
+                    android:text="ID"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.example.kyoungae.myapplication.view.CustomEditText
+                    app:character_limit="english_and_numbers_only"
+                    android:id="@+id/id_text"
+                    style="@style/small_list_text_style"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="@dimen/default_padding"
+                    android:background="@color/white"
+                    android:hint="아이디" />
+
+                <TextView
+                    style="@style/small_list_text_style"
+                    android:shadowColor="@color/gray"
+                    android:shadowDx="3"
+                    android:shadowDy="3"
+                    android:layout_marginBottom="5dp"
+                    android:shadowRadius="1.5"
+                    android:text="Password"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.example.kyoungae.myapplication.view.CustomEditText
+                    android:id="@+id/password_text"
+                    style="@style/small_list_text_style"
+                    android:layout_height="28dp"
+                    android:background="@color/white"
+                    android:hint="비밀번호"
+                    app:character_limit="password" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="@dimen/default_padding"
+                android:paddingBottom="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/sign_up_button"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="10dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#ff9300"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:textSize="12dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="더베이"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:textSize="12dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="회원가입"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/login_btn_join" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/confirm_button"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="right"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#8dc100"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:textSize="12dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="로그인"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/login_btn_seekid" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+
+            <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:id="@+id/edit_id_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="ID">-->
+
+            <!--<com.thebay.tbworkeruse.view.CustomEditText-->
+            <!--android:textSize="@dimen/medium_text_size"-->
+            <!--android:id="@+id/edit_id"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:inputType="textVisiblePassword"-->
+            <!--app:character_limit="english_and_numbers_only" />-->
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:id="@+id/edit_pass_layout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:hint="Password">-->
+
+            <!--<com.thebay.tbworkeruse.view.CustomEditText-->
+            <!--android:textSize="@dimen/medium_text_size"-->
+            <!--android:id="@+id/edit_pass"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:inputType="textPassword" />-->
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <!--<Button-->
+            <!--android:id="@+id/confirm_button"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@color/colorAccent"-->
+            <!--android:text="Login"-->
+            <!--android:textColor="#434343"-->
+            <!--android:textSize="@dimen/medium_text_size" />-->
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="0.7"-->
+            <!--android:orientation="vertical">-->
+<!---->
+            <!--<Button-->
+                <!--android:id="@+id/login_button"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:background="#404040"-->
+                <!--android:text="로그인"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="@dimen/small_text_size"-->
+                <!--android:textStyle="bold" />-->
+        <!--</LinearLayout>-->
+    </LinearLayout>
+</layout>

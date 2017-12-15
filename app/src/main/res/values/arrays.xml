@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="shooting_state_list">
+        <item>촬영완료</item>
+    </string-array>
+
+    <string-array name="sms_state_list">
+        <item>SMS발송안함</item>
+        <item>SMS회원발송</item>
+        <item>SMS수취인발송</item>
+    </string-array>
+
+    <string-array name="sign_up_path_list">
+        <item>가입경로 선택</item>
+        <item>카페내 검색으로</item>
+        <item>추천을 받음</item>
+        <item>타 카페를 통해서</item>
+        <item>네이버 블로그</item>
+    </string-array>
+
+    <string-array name="mail_state_list">
+        <item>메일회원발송</item>
+        <item>메일발송안함</item>
+    </string-array>
+
+
+</resources>

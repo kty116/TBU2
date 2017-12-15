@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3d80df</color>
+    <color name="colorPrimaryDark">#276dd1</color>
+    <color name="colorAccent">#ff9300</color>
+    <!--<color name="colorAccent">#5c5c5c</color>-->
+
+    <!--<color name="colorPrimary">#4FC3F7</color>-->
+    <!--<color name="colorPrimaryDark">#03A9F4</color>-->
+    <!--<color name="colorAccent">#FFD600</color>-->
+    <color name="red">#e92e79</color>
+    <color name="yellow">#ff9300</color>
+    <color name="green">#8dc100</color>
+    <color name="defaultGray">#5c5c5c</color>
+    <color name="blue">#35e1ed</color>
+    <color name="dGay">#404040</color>
+
+    <color name="lightLightGray">#F8F8F8</color>
+    <color name="lightGray">#25000000</color>
+    <color name="darkGray">#de000000</color>
+
+    <color name="rLightLightGray">#e5e5e5</color>
+    <color name="rLightGray">#c9c9c9</color>
+
+    <color name="nav_color1">#444B53</color>
+    <color name="nav_color2">#3c4249</color>
+    <color name="navLightGray">#787878</color>
+
+    <color name="gray">#9a000000</color>
+    <!--<color name="green">#89c05a</color>-->
+    <color name="violet">#9475a5</color>
+    <!--<color name="red">#EC7161</color>-->
+    <!--<color name="blue">#48A1DD</color>-->
+    <!--<color name="yellow">#EDAF4A</color>-->
+    <color name="yell">#EDAF</color>
+    <color name="transparency">#00ffffff</color>
+    <color name="white">#ffffff</color>
+
+
+
+    <color name="lBlue">#022FB3</color>
+    <color name="IGreen">#02CA9C</color>
+    <color name="IYellow">#F8A51E</color>
+    <color name="ILightYellow">#E3F8B9</color>
+    <color name="rRed">#E72951</color>
+
+
+    <color name="rBlue">#1565c0</color>
+    <color name="rLightBlue">#4A91E2</color>
+</resources>

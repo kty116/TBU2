@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/parent_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:background="@color/rLightLightGray"
+        android:orientation="vertical"
+        android:padding="@dimen/default_padding">
+
+        <TextView
+            style="@style/medium_list_text_style"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="주소 목록"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="300dp"
+            android:layout_height="400dp"></android.support.v7.widget.RecyclerView>
+
+
+        <!--<ImageView-->
+        <!--android:layout_width="20dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:src="@drawable/ic_next" />-->
+
+        <!--<TextView-->
+        <!--style="@style/medium_list_text_style"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="다음"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textStyle="bold" />-->
+
+
+    </LinearLayout>
+</layout>

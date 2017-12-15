@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            app:cardUseCompatPadding="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/default_padding">
+
+                <!--shoppingMall; //쇼핑몰 url-->
+                <!--private String orderNumber; //주문번호-->
+                <!--private String buyer; //구매자-->
+                <!--private String category; //품목 카테고리-->
+                <!--private String trackingNumber; //트래킹번호-->
+                <!--private boolean isTrackingNumberNotEntered; //트래킹번호 나중에 입력 체크박스-->
+                <!--private String price; //금액-->
+                <!--private String quantity; //수량-->
+                <!--private String color; //색상-->
+                <!--private String size; //사이즈-->
+                <!--private String goodsUrl; //상품 url-->
+                <!--private String imageUrl; //이미지 url-->
+                <!--private String bringImage; //핸드폰 이미지 등록-->
+
+                <TextView
+                    android:id="@+id/products_index"
+                    style="@style/title_text_style"
+                    android:background="@color/colorPrimary"
+                    android:text="상품 정보"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="100dp"
+                        android:layout_height="75dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/rLightLightGray"
+                        android:src="@drawable/splash_logo" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/get_order_list_button"
+                            style="@style/small_list_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="33dp"
+                            android:background="@color/colorPrimary"
+                            android:text="타오바오 오더내역 가져오기"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/copy_button"
+                                style="@style/small_list_text_style"
+                                android:layout_width="0dp"
+                                android:layout_height="36dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/green"
+                                android:text="복사"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/add_button"
+                                style="@style/small_list_text_style"
+                                android:layout_width="0dp"
+                                android:layout_height="36dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@color/yellow"
+                                android:text="추가"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/delete_button"
+                                style="@style/small_list_text_style"
+                                android:layout_width="0dp"
+                                android:layout_height="36dp"
+                                android:layout_weight="1"
+                                android:background="@color/red"
+                                android:text="삭제"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:text="쇼핑몰"
+                        android:textColor="#404040"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <TextView
+                        android:id="@+id/shopping_mall_edit"
+                        style="@style/small_list_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/rLightLightGray"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:text="주문번호"
+                        android:textColor="#404040"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <com.example.kyoungae.myapplication.view.CustomEditText
+                        app:character_limit="numbers_only"
+                        android:id="@+id/order_number_edit"
+                        style="@style/small_list_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/rLightLightGray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:text="구매자 이름"
+                        android:textColor="#404040"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <com.example.kyoungae.myapplication.view.CustomEditText
+                        app:character_limit="english_only"
+                        android:id="@+id/buyer_edit"
+                        style="@style/small_list_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/rLightLightGray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:text="품목"
+                        android:textColor="#404040"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <LinearLayout
+                        android:id="@+id/category_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/category_text"
+                            style="@style/small_list_text_style"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/rLightLightGray"
+                            android:hint="품목은 정확하게 선택해주세요." />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_drop_down" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:text="상품명"
+                        android:textColor="#404040"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <TextView
+                        android:hint="품목을 선택하면 상품명이 입력됩니다."
+                        android:id="@+id/products_name_text"
+                        style="@style/small_list_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/rLightLightGray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:text="트래킹 번호"
+                        android:textColor="#404040"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <com.example.kyoungae.myapplication.view.CustomEditText
+                        app:character_limit="english_and_numbers_only"
+                        android:id="@+id/tracking_number_edit"
+                        style="@style/small_list_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/rLightLightGray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:text="금액"
+                            android:textColor="#404040"
+                            android:textSize="@dimen/small_text_size" />
+
+                        <com.example.kyoungae.myapplication.view.CustomEditText
+                            android:inputType="number"
+                            android:id="@+id/price_edit"
+                            style="@style/small_list_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/rLightLightGray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/default_padding"
+                            android:text="수량"
+                            android:textColor="#404040"
+                            android:textSize="@dimen/small_text_size" />
+
+                        <com.example.kyoungae.myapplication.view.CustomEditText
+                            app:character_limit="numbers_only"
+                            android:id="@+id/quantity_edit"
+                            style="@style/small_list_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/rLightLightGray" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="75dp"
+                            android:layout_height="wrap_content"
+                            android:text="색상"
+                            android:textColor="#404040"
+                            android:textSize="@dimen/small_text_size" />
+
+                        <com.example.kyoungae.myapplication.view.CustomEditText
+                            android:id="@+id/color_edit"
+                            style="@style/small_list_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/rLightLightGray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/default_padding"
+                            android:text="사이즈"
+                            android:textColor="#404040"
+                            android:textSize="@dimen/small_text_size" />
+
+                        <com.example.kyoungae.myapplication.view.CustomEditText
+                            android:id="@+id/size_edit"
+                            style="@style/small_list_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/rLightLightGray" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:text="상품 URL"
+                        android:textColor="#404040"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <com.example.kyoungae.myapplication.view.CustomEditText
+                        android:inputType="textVisiblePassword"
+                        android:id="@+id/goods_url_edit"
+                        style="@style/small_list_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/rLightLightGray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:text="이미지 URL"
+                        android:textColor="#404040"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <com.example.kyoungae.myapplication.view.CustomEditText
+                        android:inputType="textVisiblePassword"
+                        android:id="@+id/image_url_edit"
+                        style="@style/small_list_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/rLightLightGray" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</layout>

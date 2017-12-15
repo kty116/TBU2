@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/default_padding"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal">
+
+        <Button
+            android:textStyle="bold"
+            style="@style/small_list_text_style"
+            android:id="@+id/all_check_button"
+            android:layout_marginRight="@dimen/default_padding"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:text="전체 선택"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+
+        <Button
+            android:textStyle="bold"
+            style="@style/small_list_text_style"
+            android:id="@+id/all_no_check_button"
+            android:textColor="@color/white"
+            android:background="@color/yellow"
+            android:text="전체 해제"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp" />
+        </LinearLayout>
+
+</LinearLayout>

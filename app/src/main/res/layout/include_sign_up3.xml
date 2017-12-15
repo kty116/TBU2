@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/parent_layout"
+        android:orientation="vertical">
+
+        <ImageView
+            android:src="@drawable/splash_logo"
+            android:layout_width="73dp"
+            android:layout_height="53dp" />
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:shadowColor="@color/gray"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="1.5"
+            android:textColor="@color/white"
+            style="@style/medium_list_text_style"
+            android:text="더베이에 오신 것을 환영합니다"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:textColor="@color/white"
+            style="@style/small_list_text_style"
+            android:text="신뢰 받는 더베이와 함께\n언어에 구애 받지 않는\n쉽고 빠른 타오바오 탐험을 시작하세요."
+            />
+
+    </LinearLayout>
+</layout>

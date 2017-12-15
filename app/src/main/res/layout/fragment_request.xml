@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/rLightLightGray"
+        android:orientation="vertical"
+        android:padding="@dimen/double_padding">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/medium_list_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_padding"
+                        android:text="원하시는 추가 서비스를 선택하세요."
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_padding"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+
+                                <CheckBox
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_marginLeft="-10dp"
+                                    android:id="@+id/business_check"
+                                    style="@style/medium_list_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3.5"
+                                    android:scaleX="0.9"
+                                    android:scaleY="0.9"
+                                    android:text="사업자 검수"
+                                    />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@color/green"
+                                    android:text="검수 옵션"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:background="@color/colorPrimary"
+                                    android:text="3,000원"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="수량, 난이도에 따라 비용이 다를 수 있습니다.\n(이용안내를 확인해 주세요.)" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+
+                                <CheckBox
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_marginLeft="-10dp"
+                                    android:id="@+id/shoe_box_check"
+                                    style="@style/medium_list_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3.5"
+                                    android:scaleX="0.9"
+                                    android:scaleY="0.9"
+                                    android:text="신발박스 제거"
+                                    />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@color/yellow"
+                                    android:text="제거 옵션"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:background="@color/colorPrimary"
+                                    android:text="500원"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="신발박스만 제거(신발박스 없을 시 미청구)" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+
+                                <CheckBox
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_marginLeft="-10dp"
+                                    android:id="@+id/clothes_box_check"
+                                    style="@style/medium_list_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3.5"
+                                    android:scaleX="0.9"
+                                    android:scaleY="0.9"
+                                    android:text="의류박스 제거"
+                                    />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@color/yellow"
+                                    android:text="제거 옵션"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:background="@color/colorPrimary"
+                                    android:text="500원"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="의류박스만 제거(의류박스 없을 시 미청구)" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_padding"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/delivery_box_check"
+                                    style="@style/medium_list_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="-10dp"
+                                    android:layout_weight="3.5"
+                                    android:scaleX="0.9"
+                                    android:scaleY="0.9"
+                                    android:text="택배박스 제거"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textStyle="bold"
+                                    />
+
+                                <TextView
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="23dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/yellow"
+                                    android:gravity="center"
+                                    android:text="제거 옵션"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="23dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/colorPrimary"
+                                    android:gravity="center"
+                                    android:text="2000원"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="소형 택배박스 제거\n(무게 영향 없는 마대/폴리백 미제거)" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+
+                                <CheckBox
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_marginLeft="-10dp"
+                                    android:id="@+id/packing_box_check"
+                                    style="@style/medium_list_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3.5"
+                                    android:scaleX="0.9"
+                                    android:scaleY="0.9"
+                                    android:text="한 박스로 포장"
+                                    />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@color/red"
+                                    android:text="포장 옵션"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:background="@color/colorPrimary"
+                                    android:text="free"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="한 박스 포장이 불가능할 시 분할포장합니다." />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+
+                                <CheckBox
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_marginLeft="-10dp"
+                                    android:id="@+id/packing_supplement_check"
+                                    style="@style/medium_list_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3.5"
+                                    android:scaleX="0.9"
+                                    android:scaleY="0.9"
+                                    android:text="포장 보완"
+                                   />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@color/red"
+                                    android:text="포장 옵션"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:background="@color/colorPrimary"
+                                    android:text="2,000원"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="에어캡/에어쿠션으로 보완합니다." />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_padding"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+
+                                <CheckBox
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_marginLeft="-10dp"
+                                    android:id="@+id/special_packing_check"
+                                    style="@style/medium_list_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3.5"
+                                    android:scaleX="0.9"
+                                    android:scaleY="0.9"
+                                    android:text="특수 포장"
+                                    />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@color/red"
+                                    android:text="포장 옵션"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:background="@color/colorPrimary"
+                                    android:text="2,000원"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="나무 프레임 포장(소형 10,000원 부터 - 작업시간/자재 사용량에 따라 청구)" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+
+                                <CheckBox
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_marginLeft="-10dp"
+                                    android:id="@+id/customs_clearance_check"
+                                    style="@style/medium_list_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3.5"
+                                    android:scaleX="0.9"
+                                    android:scaleY="0.9"
+                                    android:text="간이 통관 진행"
+                                    />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@color/blue"
+                                    android:text="통관 옵션"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:background="@color/colorPrimary"
+                                    android:text="3,000원"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="개인 150달러 - 사업자 통관 강제 체크, 식품 필수" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_padding"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+
+                                <CheckBox
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_marginLeft="-10dp"
+                                    android:id="@+id/origin_check"
+                                    style="@style/medium_list_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3.5"
+                                    android:scaleX="0.9"
+                                    android:scaleY="0.9"
+                                    android:text="원산지 작업 요청" />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:layout_marginRight="8dp"
+                                    android:background="@color/blue"
+                                    android:text="통관 옵션"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:background="@color/colorPrimary"
+                                    android:text="3,000원"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="판매용만 체크해 주세요.\n(비용 이용 수수료 참고 - 개인 불필요)" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+
+                                <CheckBox
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_marginLeft="-10dp"
+                                    android:id="@+id/hold_measurement_check"
+                                    style="@style/medium_list_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3.5"
+                                    android:scaleX="0.9"
+                                    android:scaleY="0.9"
+                                    android:text="배송비 측정 보류"
+                                     />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:layout_marginRight="8dp"
+                                    />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:background="@color/dGay"
+                                    android:text="패킹 옵션"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="배송비 측정(패킹)이 보류 됩니다.\n재촬영/상품 추가 예정이시면 사용하세요.\n입고 중 위치에서 패킹요청(배송비 측정) 버튼이 나옵니다." />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_padding"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+
+                                <CheckBox
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_marginLeft="-10dp"
+                                    android:id="@+id/auto_measurement_check"
+                                    style="@style/medium_list_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3.5"
+                                    android:scaleX="0.9"
+                                    android:scaleY="0.9"
+                                    android:text="배송비 자동 측정"
+                                   />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:layout_marginRight="8dp"
+                                    />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:background="@color/dGay"
+                                    android:text="패킹 옵션"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="촬영 완료 후 자동 측정 되어 변경/수정 확인이 불가할 수 있습니다." />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+
+                                <RadioButton
+                                    android:checked="true"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_marginLeft="-10dp"
+                                    android:id="@+id/buyer_check"
+                                    style="@style/medium_list_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3.5"
+                                    android:scaleX="0.9"
+                                    android:scaleY="0.9"
+                                    android:text="주문자"
+                                  />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:layout_marginRight="8dp"
+                                    />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:background="@color/dGay"
+                                    android:text="패킹 옵션"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="관부과세 금액을 안내받으실 분을 선택해 주세요." />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+
+                                <RadioButton
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_marginLeft="-10dp"
+                                    android:id="@+id/reciever_check"
+                                    style="@style/medium_list_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3.5"
+                                    android:scaleX="0.9"
+                                    android:scaleY="0.9"
+                                    android:text="수취인"
+                                     />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:layout_marginRight="8dp"
+                                    />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:background="@color/dGay"
+                                    android:text="패킹 옵션"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="관부과세 금액을 안내받으실 분을 선택해 주세요." />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_padding"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+
+                                <CheckBox
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_marginLeft="-10dp"
+                                    android:id="@+id/prepaid_freight_check"
+                                    style="@style/medium_list_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3.5"
+                                    android:scaleX="0.9"
+                                    android:scaleY="0.9"
+                                    android:text="중량 화물 선불"
+                                    />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:layout_marginRight="8dp"
+                                    />
+
+                                <TextView
+                                    android:gravity="center"
+                                    style="@style/tiny_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="23dp"
+                                    android:background="@color/dGay"
+                                    android:text="패킹 옵션"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <TextView
+                                style="@style/small_list_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="수취인이 경동택배 착불로 받는 걸 원치 않으시면 선택해 주세요.(예치금이 충전된 상태여야 합니다.)" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/waiting_button"
+                        android:layout_width="0dp"
+                        android:layout_height="33dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="bottom"
+                        android:background="@color/red"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_next" />
+
+                        <TextView
+                            style="@style/medium_list_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="접수 대기"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/complete_button"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="33dp"
+                            android:layout_gravity="bottom"
+                            android:background="@color/green"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_next" />
+
+                            <TextView
+                                style="@style/medium_list_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="접수 완료"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        tools:context="com.thebay_taobao.thebay1.SubActivity">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/app_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<android.support.v4.widget.Space-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="4" />-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/taobao_image"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_gravity="right"-->
+                <!--android:layout_weight="1"-->
+                <!--android:src="@drawable/taobao_purchase_logo" />-->
+                <!--</LinearLayout>-->
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:titleTextAppearance="@style/Toolbar.Sub" />
+                <!--</FrameLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/item_stroke_black_bottom_button_bg"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/default_padding">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:cardUseCompatPadding="true">
+
+                        <com.example.kyoungae.myapplication.view.CustomEditText
+                            android:imeOptions="actionSearch"
+                            android:id="@+id/search_word_text"
+                            style="@style/small_list_text_style"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:hint="타오바오 검색"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--<android.support.v7.widget.CardView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<android.support.v7.widget.SearchView-->
+                    <!--android:id="@+id/tracking_number_search_view"-->
+                    <!--style="@style/SearchViewMy"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:inputType="textVisiblePassword"-->
+                    <!--app:closeIcon="@drawable/ic_close"-->
+                    <!--app:iconifiedByDefault="false"-->
+                    <!--app:queryHint="타오바오 검색" />-->
+                    <!--</android.support.v7.widget.CardView>-->
+
+                    <ImageView
+                        android:id="@+id/filter_button"
+                        android:layout_width="19dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/top_icon_filter" />
+
+                    <ImageView
+                        android:id="@+id/search_button"
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_search" />
+
+                    <ImageView
+                        android:id="@+id/translate_button"
+                        android:layout_width="23dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_g_translate" />
+                </LinearLayout>
+
+            </android.support.design.widget.AppBarLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <FrameLayout
+                    android:id="@+id/fragment_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/no_result_text"
+                        style="@style/medium_list_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="검색 결과가 없습니다"
+                        android:textSize="20dp"
+                        android:visibility="gone" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/products_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal|top"
+                         />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/add_item_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#e5e5e5">
+
+                    <LinearLayout
+                        android:id="@+id/search_filter_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/item_stroke_cp_bottom_button_bg"
+                        android:orientation="vertical"
+                        android:padding="@dimen/default_padding"
+                        android:visibility="gone">
+
+                        <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginBottom="@dimen/default_padding"-->
+                        <!--android:text="상세 검색"-->
+                        <!--android:textColor="@color/gray"-->
+                        <!--android:textSize="@dimen/medium_text_size"-->
+                        <!--android:textStyle="bold" />-->
+
+                        <!--<android.support.v7.widget.CardView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--app:cardUseCompatPadding="true">-->
+
+                        <!--<EditText-->
+                        <!--android:id="@+id/detail_search_chinese_text"-->
+                        <!--style="@style/small_list_text_style"-->
+                        <!--android:layout_height="32dp"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:hint="상세 검색" />-->
+
+                        <!--</android.support.v7.widget.CardView>-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/item_stroke_black_bottom_button_bg"
+                            android:orientation="horizontal"
+                            android:paddingBottom="@dimen/default_padding">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="번역"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/medium_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/detail_search_korean_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/medium_text_size"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/default_padding"
+                            android:layout_marginTop="@dimen/default_padding"
+                            android:text="가격 필터 (¥)"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/medium_text_size"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/item_stroke_black_bottom_button_bg"
+                            android:orientation="horizontal"
+                            android:paddingBottom="@dimen/default_padding">
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                app:cardUseCompatPadding="true">
+
+                                <com.example.kyoungae.myapplication.view.CustomEditText
+                                    android:id="@+id/begin_price_text"
+                                    style="@style/small_list_text_style"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:hint="최처금액"
+                                    app:character_limit="numbers_only" />
+
+                            </android.support.v7.widget.CardView>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:text=" ~ " />
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                app:cardUseCompatPadding="true">
+
+                                <com.example.kyoungae.myapplication.view.CustomEditText
+                                    android:id="@+id/end_price_text"
+                                    style="@style/small_list_text_style"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:hint="최대금액"
+                                    app:character_limit="numbers_only" />
+
+                            </android.support.v7.widget.CardView>
+                        </LinearLayout>
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="@dimen/default_padding"
+                            app:cardUseCompatPadding="true">
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="32dp"
+                                    android:layout_gravity="center"
+                                    android:background="@color/colorPrimary"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="@dimen/default_padding"
+                                    android:paddingRight="@dimen/default_padding"
+                                    android:text="추천 검색어"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/medium_text_size"
+                                    android:textStyle="bold" />
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/recycler_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:background="@color/white"
+                                    android:orientation="vertical"
+                                    app:layoutManager="GridLayoutManager"
+                                    app:spanCount="4"></android.support.v7.widget.RecyclerView>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <!--<android.support.v7.widget.CardView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginBottom="15dp"-->
+                        <!--android:layout_marginTop="@dimen/default_padding"-->
+                        <!--app:cardUseCompatPadding="true">-->
+
+                        <!--<LinearLayout-->
+                        <!--android:id="@+id/filter_search_button"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="32dp"-->
+                        <!--android:background="@color/colorPrimary"-->
+                        <!--android:gravity="center">-->
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="15dp"-->
+                        <!--android:layout_height="20dp"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:src="@drawable/top_icon_filter" />-->
+
+                        <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_marginLeft="5dp"-->
+                        <!--android:maxLines="1"-->
+                        <!--android:text="검색실행"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textSize="@dimen/medium_text_size"-->
+                        <!--android:textStyle="bold" />-->
+                        <!--</LinearLayout>-->
+
+                        <!--</android.support.v7.widget.CardView>-->
+
+                    </LinearLayout>
+                </FrameLayout>
+
+            </FrameLayout>
+
+            <!--<com.roughike.bottombar.BottomBar-->
+            <!--app:layout_behavior="@string/bye_burger_bottom_behavior"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:id="@+id/bottomBar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--app:bb_tabXmlResource="@xml/bottombar_tabs" />-->
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/scroll_up_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_margin="@dimen/default_padding"
+                android:src="@drawable/ic_upward"
+                app:fabSize="mini"
+                android:visibility="gone"
+                app:useCompatPadding="true" />
+        </android.support.design.widget.CoordinatorLayout>
+
+    </LinearLayout>
+</layout>

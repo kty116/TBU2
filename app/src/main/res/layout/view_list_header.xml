@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/default_padding"
+    android:padding="@dimen/default_padding"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/large_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색 결과"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/medium_list_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="총" />
+
+        <TextView
+            android:id="@+id/total_count_text"
+            style="@style/medium_list_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            style="@style/medium_list_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="개 상품 검색" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3d80df"
+        android:orientation="vertical"
+        tools:ignore="missingPrefix">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.5"
+            android:orientation="vertical">
+
+            <!--<LinearLayout-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+            <!--<android.support.v4.widget.Space-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1" />-->
+
+            <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="0dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_weight="1.5"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/logo_img_view"
+                    android:layout_width="100dp"
+                    android:layout_height="78dp"
+                    android:src="@drawable/splash_logo" />
+
+            <LinearLayout
+                android:layout_margin="@dimen/default_padding"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:text="중국쇼핑몰 "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textSize="20dp"
+                    android:textColor="#fff799"
+                    android:text="배송대행"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
+
+            <TextView
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="26dp"
+                android:textColor="@color/white"
+                android:text="더베이"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+            <!--<android.support.v4.widget.Space-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1" />-->
+            <!--</LinearLayout>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:visibility="invisible"
+                    android:id="@+id/login_button"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="#404040"
+                    android:text="로그인"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/small_text_size"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:visibility="invisible"
+                    android:id="@+id/sign_up_button"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="#404040"
+                    android:text="회원가입"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/small_text_size"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="㈜더베이"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size"
+                android:textStyle="bold" />
+
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="0.4"-->
+            <!--android:gravity="center"-->
+            <!--android:text="(주)더베이"-->
+            <!--android:textSize="12dp" />-->
+        </LinearLayout>
+    </LinearLayout>
+</layout>

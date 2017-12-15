@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/rLightLightGray"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="@dimen/double_padding">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/default_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_padding"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/medium_list_text_style"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="수취인 정보를 입력해주세요."
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/get_order_list_button"
+                            style="@style/small_list_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_gravity="right"
+                            android:background="@color/colorPrimary"
+                            android:text="주소록"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/card_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        app:cardUseCompatPadding="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/default_padding"
+                            android:layout_marginLeft="@dimen/default_padding"
+                            android:layout_marginRight="@dimen/default_padding"
+                            android:orientation="vertical">
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="75dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="수취인 한글"
+                                        android:textColor="#404040"
+                                        android:textSize="@dimen/small_text_size"
+                                        />
+
+                                    <com.example.kyoungae.myapplication.view.CustomEditText
+                                        style="@style/small_list_text_style"
+                                        android:id="@+id/ko_name_edit"
+                                        android:background="@color/rLightLightGray"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+                                <!--<Button-->
+                                    <!--android:id="@+id/en_trans_button"-->
+                                    <!--style="@style/small_list_text_style"-->
+                                    <!--android:layout_width="70dp"-->
+                                    <!--android:layout_height="match_parent"-->
+                                    <!--android:layout_marginBottom="5dp"-->
+                                    <!--android:layout_marginTop="5dp"-->
+                                    <!--android:background="@color/dGay"-->
+                                    <!--android:text="영문 변환"-->
+                                    <!--android:textColor="@color/white"-->
+                                    <!--android:textStyle="bold" />-->
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="수취인 영문"
+                                    android:textColor="#404040"
+                                    android:textSize="@dimen/small_text_size" />
+
+                                <com.example.kyoungae.myapplication.view.CustomEditText
+                                    android:id="@+id/en_name_edit"
+                                    style="@style/small_list_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/rLightLightGray" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="통관번호"
+                                    android:textColor="#404040"
+                                    android:textSize="@dimen/small_text_size" />
+
+                                <com.example.kyoungae.myapplication.view.CustomEditText
+                                    android:id="@+id/customs_clearance_edit"
+                                    style="@style/small_list_text_style"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@color/rLightLightGray" />
+
+                                <RadioGroup
+                                    android:id="@+id/radio_group"
+                                    android:layout_marginTop="-5dp"
+                                    android:layout_marginBottom="-5dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:checked="true"
+                                        android:id="@+id/person_check"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:scaleX="0.9"
+                                        android:scaleY="0.9"
+                                        android:text="개인"
+                                        android:textColor="@color/gray"
+                                        android:textSize="@dimen/small_text_size" />
+
+                                    <RadioButton
+                                        android:id="@+id/business_check"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="-5dp"
+                                        android:scaleX="0.9"
+                                        android:scaleY="0.9"
+                                        android:text="사업자"
+                                        android:textColor="@color/gray"
+                                        android:textSize="@dimen/small_text_size" />
+                                </RadioGroup>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="연락처"
+                                    android:textColor="#404040"
+                                    android:textSize="@dimen/small_text_size" />
+
+                                <com.example.kyoungae.myapplication.view.CustomEditText
+                                    android:id="@+id/phone_edit"
+                                    style="@style/small_list_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/rLightLightGray" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:padding="5dp">
+
+                                    <TextView
+                                        android:layout_width="75dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="우편번호"
+                                        android:textColor="#404040"
+                                        android:textSize="@dimen/small_text_size" />
+
+                                    <TextView
+                                        android:id="@+id/post_edit"
+                                        style="@style/small_list_text_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/rLightLightGray" />
+                                </LinearLayout>
+
+                                <Button
+                                    android:id="@+id/post_search_button"
+                                    style="@style/small_list_text_style"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@color/green"
+                                    android:text="검색"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="주소"
+                                    android:textColor="#404040"
+                                    android:textSize="@dimen/small_text_size" />
+
+                                <TextView
+                                    android:id="@+id/address_edit"
+                                    style="@style/small_list_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/rLightLightGray" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="상세주소"
+                                    android:textColor="#404040"
+                                    android:textSize="@dimen/small_text_size" />
+
+                                <com.example.kyoungae.myapplication.view.CustomEditText
+                                    android:id="@+id/detail_address_edit"
+                                    style="@style/small_list_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/rLightLightGray" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/item_stroke_gray_bottom_button_bg"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="75dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="배송 메모"
+                                    android:textColor="#404040"
+                                    android:textSize="@dimen/small_text_size" />
+
+                                <com.example.kyoungae.myapplication.view.CustomEditText
+                                    android:id="@+id/order_memo_edit"
+                                    style="@style/small_list_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:background="@color/rLightLightGray" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/next_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="33dp"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_next" />
+
+                        <TextView
+                            style="@style/medium_list_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="다음"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>
